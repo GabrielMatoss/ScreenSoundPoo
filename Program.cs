@@ -1,26 +1,18 @@
-﻿Banda manowar = new Banda("Manowar");
+﻿Episodio epi1 = new(1, "Técnicas de facilitação", 45);
+epi1.AdicionarConvidados("Leon");
+epi1.AdicionarConvidados("Luiza");
 
-Album albumDoManowar = new Album("Louder than Hell");
+Episodio epi2 = new(3, "Técnicas de aprendizado", 50);
+epi2.AdicionarConvidados("Mariana");
+epi2.AdicionarConvidados("Giulia");
 
-Musica musica1 = new Musica(manowar, "Brothers of Metal (Pt. 1)")
-{
-    Duracao = 213,
-    Disponivel = true
-};
+Episodio epi3 = new(2, "Técnicas de segurança", 25);
+epi3.AdicionarConvidados("Yasmin");
+epi3.AdicionarConvidados("Marcos");
 
-Musica musica2 = new Musica(manowar, "Number 1")
-{
-    Duracao = 307,
-    Disponivel = false
-};
+Podcast podcast = new("Podcast especial", "Gabriel");
+podcast.AdicionarEpisodio(epi1);
+podcast.AdicionarEpisodio(epi2);
+podcast.AdicionarEpisodio(epi3);
 
-albumDoManowar.AdicionarMusica(musica1);
-albumDoManowar.AdicionarMusica(musica2);
-manowar.AdicionarAlbum(albumDoManowar);
-
-musica1.ExibirFichaTecnica();
-musica2.ExibirFichaTecnica();
-
-albumDoManowar.ExibirMusicasDoAlbum();
-
-manowar.ExibirDiscografia();
+podcast.ExibirDetalhes();
